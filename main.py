@@ -50,7 +50,7 @@ def cadastro():
         db.session.add(pizza)
         db.session.commit()
         return redirect(url_for('listagem'))
-    return render_template('cadastro.html', form=form, pizza=pizza)
+    return render_template('cadastro.html', form=form, pizza=None)
 
 @app.route('/listagem', methods=['GET'])
 def listagem():
